@@ -1,0 +1,178 @@
+﻿/*#col-all-select green #329374 blue #3399FF orange #FFCC00; */
+
+:root {
+  --setcolor: #329374;
+}
+
+html {
+ overflow-y: scroll;
+}
+
+body,
+#wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 96vh;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+.mainHead {
+    padding: 10px 0px;
+    border-bottom: 10px solid #dee0bf;
+    background-color: var(--setcolor);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100% auto;
+    width: 100%;
+}
+
+.mainHead div {
+    width: 100%;
+    margin: 0 auto auto 20;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 40px;
+    font-family: "Meiryo UI", "メイリオ";
+}
+
+.subHead {
+    padding: 18px 0px;
+    border-bottom: 10px solid #dee0bf;
+    background-color: var(--setcolor);
+    background-image: url(../img/bg.svg);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: 100% auto;
+    width: 100%;
+}
+
+.subHead div {
+    width: 100%;
+    margin: 0 auto auto 20;
+    position: relative;
+    color: #FFFFFF;
+    font-size: 25px;
+    font-family: "Meiryo UI", "メイリオ";
+}
+
+
+.footersize {
+    margin-top: auto;
+    background-color: #666666;
+    width: 100%;
+    padding: 5px 0;
+    /* position: absolute;/*←絶対位置*/
+    bottom: 0;
+    /*下に固定*/
+}
+
+.footersize div {
+    text-align: center;
+    font-size: small;
+    font-family: "Meiryo UI", "メイリオ";
+    /*height: 20px;*/
+    color: #FFFFFF;
+}
+
+.menu td{
+    font-family: "Meiryo UI", "メイリオ";
+    font-size: 14px;
+}
+
+.menu input[type="button"]{
+    width: 100px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.menu input[type="submit"]{
+    width: 100px;
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.menu input[type="text"]{
+    width: 400px;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.main {
+    width: 100%;
+}
+
+.main th {
+    font-family: "Meiryo UI", "メイリオ";
+    font-size: 14px;
+    font-weight: normal;
+    color: #FFFFFF;
+    background-color: var(--setcolor);
+}
+
+.main td {
+    border-bottom-width: 1px;
+    border-bottom-style: dashed;
+    border-bottom-color: var(--setcolor);
+    font-family: "Meiryo UI", "メイリオ";
+    font-size: 14px;
+}
+
+.main td#infile {
+    font-size: 14px;
+}
+
+.main textarea {
+    font-family: "Meiryo UI", "メイリオ";
+    font-size: 14px;
+    width: 100%;
+}
+
+.main input[type="text"] {
+    width: 98%;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 14px;
+}
+
+div,
+#info {
+    font-size: 14px;
+}
+
+.main table#list {
+    width: 100%;
+}
+
+.main table#list .row {
+    border-bottom-width: 0px;
+    border-bottom-style: none;
+    /* border-bottom-color: #3399FF; */
+    background-color: #FFFFCC;
+    font-family: "Meiryo UI", "メイリオ";
+    font-size: 14px;
+}
+
+hr,
+.layout-separete {
+    margin-bottom: 10px;
+    background: none;
+    border-top: 1px solid ##FFFFCC;
+    border-bottom: 1px solid #fff;
+    width 100%;
+}

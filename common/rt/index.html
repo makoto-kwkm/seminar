@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SunEditor</title>
+</head>
+
+<body>
+    <p>
+		<button type="button" class="btn btn-md btn-primary" onClick="sun_disabled()">Disabled</button>
+		<button type="button" class="btn btn-md btn-primary" onClick="sun_enabled()">Enabled</button>
+	</p>
+    <div id="classic" class="tabcontent" style="display: block;">
+        <div class="inline-margin"></div>
+			<textarea id="editor_classic" style="display:none;">
+			</textarea>
+    	</div>
+	</div>
+
+<script src="../rt/js/common.js"></script>
+<!-- suneditor -->
+<link href="../rt/css/suneditor.css" rel="stylesheet">
+<script src="../rt/js/suneditor.min.js"></script>
+<script src="../rt/lang/ja.js"></script>
+<!-- codeMirror -->
+<link rel="stylesheet" href="../rt/css/codemirror.min.css">
+<script src="../rt/js/codemirror.min.js"></script>
+<script src="../rt/js/htmlmixed.js"></script>
+<script src="../rt/js/xml.js"></script>
+<script src="../rt/js/css.js"></script>
+<script>
+    function sun_create() {
+        suneditor = SUNEDITOR.create('editor_classic', {
+			lang:SUNEDITOR_LANG['ja'],
+			display: 'block',
+			width: '100%',
+			height: 'auto',
+			popupDisplay: 'full',
+			charCounter: true,
+			buttonList: [
+
+				['undo', 'redo'],
+				['font', 'fontSize'],
+				['bold', 'underline', 'italic', 'strike'],
+				['fontColor'],
+				['removeFormat'],
+				['link'],
+				['codeView']
+/*
+				['undo', 'redo'],
+				['font', 'fontSize'],
+				['bold', 'underline', 'italic', 'strike', 'subscript', 'superscript'],
+				['fontColor', 'hiliteColor', 'textStyle'],
+				['removeFormat'],
+				['outdent', 'indent'],
+				['align', 'horizontalRule', 'list', 'lineHeight'],
+				['table', 'link', 'image'],
+				['save', 'preview'],
+				['codeView']
+*/
+			],
+			font : [
+				'Arial', 
+				'Comic Sans MS', 
+				'HGP教科書体', 
+				'HGP行書体', 
+				'HGP創英角ｺﾞｼｯｸUB', 
+				'HGP創英角ﾎﾟｯﾌﾟ体', 
+				'HG教科書体', 
+				'HG行書体', 
+				'HG創英角ｺﾞｼｯｸUB', 
+				'HG創英角ﾎﾟｯﾌﾟ体', 
+				'MS UI Gothic', 
+				'ＭＳ ゴシック', 
+				'ＭＳ Ｐゴシック', 
+				'ＭＳ 明朝', 
+				'ＭＳ Ｐ明朝', 
+				'メイリオ', 
+				'Meiryo UI', 
+				'游ゴシック', 
+				'Yu Gothic UI ', 
+				'游明朝'
+			],
+			codeMirror: CodeMirror
+		});
+	}
+
+    function sun_disabled() {
+		suneditor.setOptions({
+        	mode: 'inline',
+    	});
+        suneditor.disabled();
+		
+	}
+
+    function sun_enabled() {
+		suneditor.setOptions({
+        	mode: 'classic',
+    	});
+        suneditor.enabled();
+    }
+
+    sun_create();
+
+</script>
+</body>
+</html>
